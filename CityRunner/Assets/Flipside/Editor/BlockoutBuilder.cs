@@ -1327,7 +1327,7 @@ namespace Flipside.EditorTools
             // ---- Credits ----
             GameObject credits = Panel("CreditsPanel", canvasObject.transform, UiPanel);
             Text creditsText = UiText("Text", credits.transform, 34, TextAnchor.MiddleCenter, new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(1400f, 700f));
-            creditsText.text = "FLIPSIDE: City Lights\n\nDesign, programming, level design, art and audio\nmade in-house by the FLIPSIDE team\n\nBuilt with Unity 6\n\nAll sound effects and music were produced for this game.\nAll visual assets were produced for this game.\n\nPress any key to return";
+            creditsText.text = "FLIPSIDE: City Lights\n\nDesign, code, levels, art and audio by the FLIPSIDE team.\nAll art, sound effects and music were made for this game.\n\nFonts: Audiowide and Rajdhani (SIL Open Font License)\nBuilt with Unity 6\n\nPress any key to return";
 
             GameFlow flow = canvasObject.AddComponent<GameFlow>();
             SerializedObject fs = new SerializedObject(flow);
