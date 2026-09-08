@@ -18,8 +18,12 @@ electrified panels while collecting optional data chips.
 
 ## Play
 
-The game is built for the browser (WebGL). Open the published page or the contents of
-`CityRunner/Builds/WebGL` from a local web server.
+Play in the browser, no download needed:
+
+https://dexfreelancer.github.io/cm3030-games-development-teamwork-team3-group2/
+
+The page is the WebGL build published from the `gh-pages` branch. A local copy can be served from
+`CityRunner/Builds/WebGL` with any static web server.
 
 ## Project
 
