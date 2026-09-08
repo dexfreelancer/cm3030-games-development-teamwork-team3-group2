@@ -34,8 +34,8 @@ namespace Flipside.EditorTools
         static BuildReport Build(string output)
         {
             PlayerSettings.productName = "FLIPSIDE: City Lights";
-            PlayerSettings.WebGL.compressionFormat = WebGLCompressionFormat.Disabled; // plays from any static host
-            PlayerSettings.WebGL.decompressionFallback = false;
+            PlayerSettings.WebGL.compressionFormat = WebGLCompressionFormat.Gzip; // small download; the loader
+            PlayerSettings.WebGL.decompressionFallback = true;                       // decompresses on any static host
             PlayerSettings.defaultWebScreenWidth = 1280;
             PlayerSettings.defaultWebScreenHeight = 720;
             PlayerSettings.runInBackground = true;
