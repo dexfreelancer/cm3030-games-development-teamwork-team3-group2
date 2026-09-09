@@ -230,8 +230,11 @@ namespace Flipside.EditorTools
             Seg(level, 560f, 600f, 0f, 7f, Surface.Grid);
             // Fan 1 sweeps the floor lane only (tip y = 4), Fan 2 sweeps the ceiling lane only (tip y = 3):
             // cross the first on the ceiling, the second on the floor, and time the flips in between.
-            LaserRotate("Fan 1", level, new Vector2(575f, -5.5f), 90f, -36f, 36f, 9.5f, 4.4f, 0f);
-            LaserRotate("Fan 2", level, new Vector2(590f, 12.5f), -90f, -36f, 36f, 9.5f, 4.4f, 0.5f);
+            // Three fans, one lane each, in the order floor -> ceiling -> floor, so the section has to be
+            // crossed by changing surface twice and timing each pass. Beams reach past the lane into the slab.
+            LaserRotate("Fan 1", level, new Vector2(573f, -5.5f), 90f, -40f, 40f, 10.5f, 3.2f, 0f);
+            LaserRotate("Fan 2", level, new Vector2(586f, 12.5f), -90f, -40f, 40f, 10.5f, 3.2f, 0.5f);
+            LaserRotate("Fan 3", level, new Vector2(599f, -5.5f), 90f, -40f, 40f, 10.5f, 3.6f, 0.25f);
             Chip("Chip 13", level, new Vector2(582f, 4.6f));
             // (h) portal chain across voids, with a blink beam on the ceiling leg
             Seg(level, 600f, 612f, 0f, null, Surface.Grid);
