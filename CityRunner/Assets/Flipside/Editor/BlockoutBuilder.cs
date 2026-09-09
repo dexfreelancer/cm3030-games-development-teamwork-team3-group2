@@ -81,7 +81,7 @@ namespace Flipside.EditorTools
             Sign("sign_1", deco, new Vector2(29.5f, 5.2f), 3f);
             Sign("sign_2", deco, new Vector2(46f, 5f), 3f);
             FlipPromptZone(level, new Vector2(24f, 2f), new Vector2(4f, 4f), new Vector2(25f, 3.8f));
-            Checkpoint("Checkpoint 1", level, new Vector2(50f, 0f), startsClock: true);
+            Checkpoint("Checkpoint 1", level, new Vector2(50f, 0f), startsClock: false);
             DirectionArrow(level, new Vector2(5f, 2.4f));
             Prop("prop_water_tower", deco, new Vector2(9f, 0f), false);
             Prop("prop_ac_unit", deco, new Vector2(4.5f, 0f), false);
@@ -106,7 +106,6 @@ namespace Flipside.EditorTools
             Panel("Electric Panel 1", level, new Vector2(104f, 0.15f), 2f);
             Spikes("Ceiling Spikes 1", level, new Vector2(108f, 6.75f), 2f, true);
             Chip("Chip 3", level, new Vector2(104f, 4.6f));
-            Checkpoint("Checkpoint 2", level, new Vector2(110f, 0f), startsClock: false);
             Sign("sign_3", deco, new Vector2(61f, 3.6f), 3.2f);
             Sign("sign_4", deco, new Vector2(96f, 4.2f), 2.4f);
             Prop("prop_antenna", deco, new Vector2(70f, -2f), false);
@@ -635,8 +634,8 @@ namespace Flipside.EditorTools
 
             BoxCollider2D trigger = root.AddComponent<BoxCollider2D>();
             trigger.isTrigger = true;
-            trigger.offset = new Vector2(0f, 2f);
-            trigger.size = new Vector2(2.5f, 4.5f);
+            trigger.offset = new Vector2(0f, 6f);   // floor to ceiling: a beacon cannot be skipped by running the underside
+            trigger.size = new Vector2(2.5f, 14f);
 
             Checkpoint checkpoint = root.AddComponent<Checkpoint>();
             SerializedObject so = new SerializedObject(checkpoint);

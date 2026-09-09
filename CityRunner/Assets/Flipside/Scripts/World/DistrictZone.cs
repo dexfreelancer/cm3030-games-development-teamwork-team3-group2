@@ -20,7 +20,11 @@ namespace Flipside
         {
             if (entered || other.GetComponentInParent<PlayerMotor>() == null) return;
             entered = true;
-            if (RunState.Instance != null) RunState.Instance.EnterDistrict(districtIndex, districtName);
+            if (RunState.Instance == null) return;
+            RunState.Instance.EnterDistrict(districtIndex, districtName);
+            // The delivery clock starts with the first district. The zone spans the whole corridor,
+            // so it cannot be bypassed by crossing on the ceiling.
+            if (districtIndex == 1) RunState.Instance.StartClock();
         }
     }
 }

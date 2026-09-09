@@ -8,7 +8,7 @@ Shader "Flipside/FlipWave"
         _Inside ("Inside is orange", Float) = 1
         _Outside ("Outside is orange", Float) = 0
         _Ring ("Ring width", Float) = 0.035
-        _Intensity ("Orange intensity", Range(0, 1)) = 0.85
+        _Intensity ("Orange intensity", Range(0, 1)) = 0.5
         _Distort ("Ring distortion", Float) = 0.015
     }
 
